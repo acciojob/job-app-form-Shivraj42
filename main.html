@@ -4,6 +4,12 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+    <style>
+        .req::after{
+            content: ' *';
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -11,6 +17,47 @@
     <script type="text/javascript" src="./script.js">
 </script>
 
+<form method="post">
+
+    <Label for="name" class="req">Name</Label>
+    <input type="text"  id="name" required>
+
+    <Label for="email">Name</Label>
+    <input type="email"  id="email" required>
+    
+    <p class="req">Gender</p>
+    <label for="male" >Male</label>
+    <input type="radio" name="gender" id="male" required>
+    <label for="female" >Female</label>
+    <input type="radio" name="gender" id="female" required>
+    <label for="other" >Other</label>
+    <input type="radio" name="gender" id="other" required>
+
+
+
+    <label for="laptop" class="req">Laptop Brands</label>
+    <select name="lb" id="laptop">
+        <option value="Apple">Apple</option>
+        <option value="asus">Asus</option>
+        <option value="hp">HP</option>
+    </select>
+
+    <Label for="age" class="req">Age</Label>
+    <input type="number" id="age" required>
+
+    <Label for="dob" class="req">Date of Birth</Label>
+    <input type="date"  id="dob" required>
+
+    <Label for="password" class="req">Password</Label>
+    <input type="password" id="password" required>
+
+    <Label for="portfolio">Portfolio URL</Label>
+    <input type="url"  id="portfolio">
+
+    <button type="submit"> Submit</button>
+
+
+</form>
 </body>
 
 </html>
